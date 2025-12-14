@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пчелиная Пасека</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="startScreen" class="screen">
+            <h1>Пчелиная Пасека</h1>
+            <p>Собирайте цветы, избегайте муравьев!</p>
+            <button id="startButton">Начать игру</button>
+        </div>
+        
+<div id="gameScreen" class="screen hidden">
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+            <div id="ui">
+                <div id="score">Цветы: 0/7</div>
+                <div id="level">Уровень: 1</div>
+                <div id="controls">
+                    <button id="pauseButton">Пауза</button>
+                    <button id="restartButton">Рестарт</button>
+                    <button id="mainMenuButton">Главная</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pauseScreen" class="screen hidden">
+            <h2>Пауза</h2>
+            <button id="resumeButton">Продолжить</button>
+            <button id="mainMenuFromPause">Главная</button>
+        </div>
+        
+        <div id="gameOverScreen" class="screen hidden">
+            <h2>Игра окончена!</h2>
+            <p id="finalScore">Собрано цветов: 0</p>
+            <div class="button-group">
+                <button id="restartFromGameOver">Играть снова</button>
+                <button id="mainMenuFromGameOver">Главная</button>
+            </div>
+        </div>
+        
+        <div id="levelCompleteScreen" class="screen hidden">
+            <h2>Уровень пройден!</h2>
+            <p>Переход на следующий уровень...</p>
+            <button id="mainMenuFromLevelComplete">Главная</button>
+        </div>
+        
+        <div id="winScreen" class="screen hidden">
+            <h2>Поздравляем!</h2>
+            <p>Вы прошли все уровни!</p>
+            <div class="button-group">
+                <button id="restartFromWin">Играть снова</button>
+                <button id="mainMenuFromWin">Главная</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/InputHandler.js"></script>
+    <script src="js/Collision.js"></script>
+    <script src="js/Platform.js"></script>
+    <script src="js/Flower.js"></script>
+    <script src="js/Ant.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
